@@ -6,7 +6,8 @@
     <title>music</title>
     <link rel="stylesheet" href="output.css">
   </head>
-  <body class="min-h-screen flex justify-center items-center bg-neutral-900">
+  <body class="min-h-screen bg-neutral-900 grid grid-cols-1">
+    <section class="flex justify-center items-center">
     <div class="h-[20rem] w-[21rem] bg-slate-200 rounded-lg">
       <div class="h-[17rem] pt-6 px-6">
         <h2 class="text-2xl font-bold text-gray-700">
@@ -28,7 +29,8 @@
         </div>
       </div>
     </div>
-    <audio src="music.mp3" autoplay hidden></audio>
+    </section>
+    <audio src="music.mp3" controls autoplay class="mt-24 mx-auto"></audio>
   </body>
   <script>
     let lyrics = [
