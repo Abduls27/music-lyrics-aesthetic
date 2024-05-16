@@ -63,9 +63,10 @@
 
     showLyrics();
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const music = document.getElementById("music");
-      music.play();
-    });
+    document.body.addEventListener('click', function() {
+    const music = document.getElementById('music');
+    music.play();
+});
+
   </script>
 </html>
