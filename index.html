@@ -4,27 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>music</title>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="output.css" />
   </head>
   <body class="min-h-screen flex justify-center items-center bg-neutral-900">
     <div class="h-[20rem] w-[21rem] bg-slate-200 rounded-lg">
       <div class="h-[17rem] pt-6 px-6">
-        <h2 class="text-2xl font-bold text-gray-700">
-          still same epilogue
-        </h2>
+        <h2 class="text-2xl font-bold text-gray-700">still same epilogue</h2>
         <h4 class="text-gray-500">a year ago</h4>
-        <p
-          id="lyrics"
-          class="mt-16 text-slate-800 font-medium text-lg"></p>
+        <p id="lyrics" class="mt-16 text-slate-800 font-medium text-lg"></p>
       </div>
       <div class="flex items-center gap-2 bg-stone-300 p-3 w-full rounded-md">
-        <img id="playmusic" src="vinyl.png" alt="vinyl" class="h-10 animate-spin" />
+        <img
+          id="playmusic"
+          src="vinyl.png"
+          alt="vinyl"
+          class="h-10 animate-spin" />
         <div class="flex w-full justify-between items-center">
-            <div class="text-sm text-slate-700">
-              <h2 class="font-bold">A Year Ago</h2>
-              <p>James Arthur</p>
-            </div>
-            <img src="heart.png" alt="like" class="h-5">
+          <div class="text-sm text-slate-700">
+            <h2 class="font-bold">A Year Ago</h2>
+            <p>James Arthur</p>
+          </div>
+          <img src="heart.png" alt="like" class="h-5" />
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
       "I wonder if you're making lies",
       "I wonder if he loves you like",
       "The way you said that only I could do",
-      "I wish that I could tell you that I miss you"
+      "I wish that I could tell you that I miss you",
     ];
 
     let i = 0;
@@ -47,31 +47,25 @@
       if (i < lyrics.length) {
         let lyric = document.getElementById("lyrics");
         lyric.innerHTML = lyrics[i] + "<br>";
-        lyric.classList.add('animate-fade');
-        setTimeout(function() {
-      lyric.classList.remove('animate-fade');
-    }, 300);
+        lyric.classList.add("animate-fade");
+        setTimeout(function () {
+          lyric.classList.remove("animate-fade");
+        }, 300);
 
-        if(i == 0){
-            setTimeout(showLyrics, 3500); // 3000
-        } else{
-            setTimeout(showLyrics, 4000); // 4000
+        if (i == 0) {
+          setTimeout(showLyrics, 3500); // 3000
+        } else {
+          setTimeout(showLyrics, 4000); // 4000
         }
         i++;
-        
       }
     }
 
     showLyrics();
 
-    const play = getElementById('playmusic').addEventListener('click', function () {
-      const musik = getElementById('music');
-      if (musik.paused) {
-        musik.play();
-      }else{
-        musik.pause();
-      }
-    })
-    
+    document.addEventListener("DOMContentLoaded", function () {
+      const music = document.getElementById("music");
+      music.play();
+    });
   </script>
 </html>
