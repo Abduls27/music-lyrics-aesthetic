@@ -18,7 +18,7 @@
           class="mt-16 text-slate-800 font-medium text-lg"></p>
       </div>
       <div class="flex items-center gap-2 bg-stone-300 p-3 w-full rounded-md">
-        <img src="vinyl.png" alt="vinyl" class="h-10 animate-spin" />
+        <img id="playmusic" src="vinyl.png" alt="vinyl" class="h-10 animate-spin" />
         <div class="flex w-full justify-between items-center">
             <div class="text-sm text-slate-700">
               <h2 class="font-bold">A Year Ago</h2>
@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <audio src="music.mp3" hidden autoplay></audio>
+    <audio id="music" src="music.mp3" hidden autoplay></audio>
   </body>
   <script>
     let lyrics = [
@@ -63,5 +63,15 @@
     }
 
     showLyrics();
+
+    const play = getElementById('playmusic').addEventListener('click', function () {
+      const musik = getElementById('music');
+      if (musik.paused) {
+        musik.play();
+      }else{
+        musik.pause();
+      }
+    })
+    
   </script>
 </html>
